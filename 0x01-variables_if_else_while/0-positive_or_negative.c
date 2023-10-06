@@ -1,7 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
 /**
  *  * main - Entry point
  *   *
@@ -9,16 +8,16 @@
  *    */
 int main(void)
 {
-		int n;
-		/*to seed a random time*/
-		srand(time(0));
-		/*to round it and center it around zero*/
-		n = rand() - RAND_MAX / 2;
-		if (n > 0) 
-			printf("%d is positive", n);
-		else if (n < 0)
-			printf(" %d is negative ", n);
-		else if (n = 0)
-			printf(" %d is zero ", n);
-		return (0);
+	int n;
+		    /*to seed a random time*/
+	srand(time(0));
+			    /*to round it and center it around zero*/
+	n = rand() - RAND_MAX / 2;
+	if (n > 0) 
+		printf("%d is positive", n);
+	else if (n < 0)
+		printf(" %d is negative ", n);
+	else if (n == 0)
+		printf("%d is zero" ,n);
+	return (0);
 }
