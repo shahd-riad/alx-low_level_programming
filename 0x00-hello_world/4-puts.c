@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env gcc
 include <stdio.h>
 {
 	puts("\"Programming is like building a multilingual puzzle");
