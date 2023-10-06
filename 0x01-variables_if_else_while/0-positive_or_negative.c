@@ -14,7 +14,6 @@ int main(void)
 	/*to round it and center it around zero*/
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-	
 		printf("%d is positive\n", n);
 	else if (n < 0)
 		printf("%d is negative\n", n);
