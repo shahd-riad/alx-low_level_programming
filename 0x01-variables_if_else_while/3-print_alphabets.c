@@ -3,11 +3,11 @@
  *  * main - Entry point
  *   *
  *    * Return: Always 0 (Success)
- */
+*/
 int main(void) 
 {
 	char alpha;
-        char ALPHA;
+	char ALPHA;
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 		putchar(alpha);
 	for (ALPHA = 'A'; ALPHA <= 'Z'; ALPHA++)
