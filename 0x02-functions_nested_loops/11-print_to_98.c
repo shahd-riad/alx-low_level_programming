@@ -9,7 +9,7 @@
  *    * Description: function that prints all natural numbers
  *     * from n to 98, follo
  *      * Return: Nothing
- *       */
+*/
 
 void print_to_98(int n)
 {
