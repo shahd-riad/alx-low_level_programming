@@ -18,8 +18,10 @@ int result;
 		{
 			result = num * i;										                printf("%d", result);
 		if (i < 9)
+		{
 			printf(",");
-			putchar(' ');		
+			putchar(' ');
+		}		
 		}
 		putchar('\n');
 	}
