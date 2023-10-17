@@ -5,7 +5,7 @@
  *  * _puts - prints a string, to stdout
  *   * @str: value to evaluate.
  *    * Return: void
- *     */
+*/
 
 void _puts(char *str)
 {
