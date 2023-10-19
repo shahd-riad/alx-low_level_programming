@@ -16,12 +16,11 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *contecated;
     	int i;
-
+	
+	i = 0;
 	contecated = dest;
 	while (*dest)
-		dest++;
-	while (*src)
-		*src++;				    
+		dest++;    
 	while (*src && (i < n))
 	{
 		*dest++ = *src++;
