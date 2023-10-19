@@ -9,7 +9,6 @@
 char *string_toupper(char *str)
 {
 	int i;
-  	char *ptr;
 
 	i = 0;
 	while (str[i])
