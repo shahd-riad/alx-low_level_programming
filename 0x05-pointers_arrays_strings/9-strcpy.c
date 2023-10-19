@@ -7,9 +7,9 @@
  *    * @src: value to be evaluated.
  *     * Return: 0
 */
-char* _strcpy(char* dest, char* src) 
+char *_strcpy(char *dest, char *src)
 {
-	char* ptr;
+	char *ptr;
 
 	ptr = dest;
 	while (*src != '\0')

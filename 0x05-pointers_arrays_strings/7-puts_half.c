@@ -14,16 +14,16 @@ void puts_half(char *str)
 	for (len = 0;  str[len] != '\0'; ++len)
 	{
 	}
-	if(len % 2 != 0)
+	if (len % 2 != 0)
 	{
-		for ( l = (len-1) / 2; str[l] != '\0'; l++)
+		for ( l = (len + 1) / 2; str[l] != '\0'; l++)
 		{
 			putchar(str[l]);
 		}
 	}
 	else
 	{
-		for ( l = len / 2;str[l] != '\0'; l++)
+		for (l = len / 2; str[l] != '\0'; l++)
 		{
 			putchar(str[l]);
 		}
