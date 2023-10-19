@@ -6,15 +6,25 @@
  *   * @str: value to be evaluated.
  *    * Return: 0
 */
+
 void puts2(char *str)
 {
-	int len;
+	int len = 0;
+	int l = 0;
+	char *y = str;
+	int z;
 
-	for (len = 0;  str[len] != '\0'; ++len)
+	while (*y != '\0')
 	{
-		if (str[len] % 2 == 0)
+		y++;
+		len++;
+	}
+	l = len - 1;
+	for (z = 0 ; z <= l ; z++)
+	{
+		if (z % 2 == 0)
 		{
-			_putchar(str[len]);
+			_putchar(str[z]);
 		}
 	}
 	_putchar('\n');
