@@ -5,22 +5,20 @@
 */
 void print_square(int size)
 {
-	int i;
-       	int j;
-      
+	int hgt, wid;
+
 	if (size > 0)
-    	{
-	    	for (i =0; i < (size); i++)
+	{
+		for (hgt = 0; hgt < size; hgt++)
 		{
-			_putchar('\n');
-			for (j =0; j < size; j++)
-			{
+			for (wid = 0; wid < size; wid++)
 				_putchar('#');
-			}
-			if (i ==j - 1)
+
+			if (hgt == size - 1)
 				continue;
+			_putchar('\n');
 		}
 	}
-       	_putchar('\n');
-}
 
+	_putchar('\n');
+}
