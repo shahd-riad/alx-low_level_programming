@@ -13,11 +13,11 @@
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char* ptr;
+	char *ptr;
 	int i;
 
 	i = 0;
-  	ptr = dest;
+	ptr = dest;
 	while (*src && (i < n))
 	{
 		*dest++ = *src++;
@@ -27,8 +27,8 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		*dest++ = '\0';
 		i++;
-	}		          
-	return ptr;
+	}	          
+	return (ptr);
 }
 
 

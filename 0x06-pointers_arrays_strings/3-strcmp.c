@@ -13,7 +13,7 @@
 int _strcmp(char *s1, char *s2)
 {
 	int sum1;
-        int sum2;
+	int sum2;
 	int len;
 
 	sum1 = 0;
@@ -26,5 +26,5 @@ int _strcmp(char *s1, char *s2)
 	{
 		sum2 += (int)s2[len];
 	}
-	return(sum1 - sum2);
+	return (sum1 - sum2);
 }
