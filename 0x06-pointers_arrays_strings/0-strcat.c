@@ -9,7 +9,7 @@
 char *_strcat(char *dest, char *src)
 {
 	char *contecated;
-       
+
 	contecated = dest;
 	while (*dest)
 		dest++;
