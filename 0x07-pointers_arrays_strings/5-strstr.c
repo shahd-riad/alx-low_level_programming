@@ -9,23 +9,31 @@
  * of the located substring.
  * If the substring is not located - NULL.
 */
+
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
-	char *seq;
+	int index;
 
-	seq = NULL;
-	for (i = 0; needle[i] != '\0'; i++)
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-		for (j =0; haystack[j] != '\0'; j++)
-				{	
-					if (haystack[j] == needle[i])
-					{
-						seq = (haystack + j);
-					}
-				}
-		return (seq);
+		index = 0;
+
+		if (haystack[index] == needle[index])
+		{
+			do {
+				if (needle[index + 1] == '\0')
+					return (haystack);
+
+				index++;
+			}
+
+		while (haystack[index] == needle[index]);
+		}
+		haystack++;
 	}
+
 	return ('\0');
 }
