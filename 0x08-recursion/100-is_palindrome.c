@@ -60,4 +60,4 @@ int is_palindrome(char *s)
 	if (*s)
 		return (check_palindrome(s, len, (index + 1)));
 return (0);
-
+}
