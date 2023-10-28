@@ -9,17 +9,21 @@
  * Return: If the program receives two arguments - 0.
  * If the program does not receive two arguments - 1.
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int mul;
-	
-	mul = 0;
-	if (argc !=  3)
+	int num1, num2, prod;
+
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	mul = (atoi(argv[1])) * (atoi(argv[2]));
-	printf("%d\n", mul);
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	prod = num1 * num2;
+
+	printf("%d\n", prod);
+
 return (0);
 }
