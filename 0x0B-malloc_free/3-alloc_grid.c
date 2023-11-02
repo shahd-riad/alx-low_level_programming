@@ -10,30 +10,32 @@
  * Return: pointer to the created array
  * If width or height is 0 or negative, return NULL
  * The function should return NULL on failure
-*/
+ */
 int **alloc_grid(int width, int height)
 {
-    int i;
-    int j;
-    int **grid;
+	int **grid;
+	int i, j;
 
-    if (width <= 0 || height <= 0)
-        return (NULL);
-    grid = (int**)malloc(sizeof(int*) * height);
-    if (grid == NULL)
-        return (NULL);
+	/* if width or height is 0 or negative, return NULL */
+	if (width <= 0 || height <= 0)
+		return (NULL);
 
-    for (i = 0; i < height; i++)
-    {
-        grid[i] = (int *)malloc(sizeof(int) * width);
-    }
+	/* create an array of pointers */
+	grid = (int **)malloc(sizeof(int *) * height);
+	if (grid == NULL)
+		return (NULL);
 
-    for (i = 0; i <= height; i++)
-    {
-        for(j = 0; j <= width; j++)
-        {
-            grid[i][j] = 0;
-        }
-    }
-    return (grid);
+	for (i = 0; i < height; i++)
+	{
+		grid[i] = (int *)malloc(sizeof(int) * width);
+	}
+	/* initialize all values in the array to 0 */
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0;
+	}
+
+
+	return (grid);
 }
