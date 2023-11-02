@@ -9,6 +9,10 @@
 */
 char **strtow(char *str)
 {
+	char **strings;
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
+	if (strings == NULL)
+		return (NULL);
+return (strings);
 }
