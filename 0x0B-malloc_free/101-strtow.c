@@ -10,8 +10,10 @@
 char **strtow(char *str)
 {
 	char **strings;
+	
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
+	strings = malloc(sizeof(char *) * 50);
 	if (strings == NULL)
 		return (NULL);
 return (strings);
