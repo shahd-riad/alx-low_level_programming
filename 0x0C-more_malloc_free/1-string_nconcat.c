@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 
-int _strlen(char *s);
 /**
  * string_nconcat - Concatenates two strings using at
  * most an inputted number of bytes.
@@ -13,44 +12,33 @@ int _strlen(char *s);
  * Otherwise - a pointer to the concatenated space in memory.
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{	
-	unsigned int len_s1;
-	unsigned int i;
-	unsigned int j = 0;
-	char *s3;
+{
+	char *concat;
+	unsigned int len = n, index;
 
-	len_s1 = (s1 == NULL) ? 0 : _strlen(s1);
+	if (s1 == NULL)
+		s1 = "";
 
-	s3 = malloc(sizeof(char) * (len_s1 + n + 1));
+	if (s2 == NULL)
+		s2 = "";
 
-    if (s3 == NULL)
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
+	if (concat == NULL)
 		return (NULL);
 
-	for (i = 0; i < len_s1; i++, j++)
-		s3[j] = s1[i];
+	len = 0;
 
-	for (i = 0; i <= n; i++, j++)
-		s3[j] = s2[i];
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
 
-	s3[j] = '\0';
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
 
-	return (s3);
-}
-/**
- * _strlen - finds the length of a string
- * @s: address of first character in the string
- *
- * Return: length og the string
-*/
-int _strlen(char *s)
-{
-	int length = 0;
+	concat[len] = '\0';
 
-	while (*s)
-	{
-		length++;
-		s++;
-	}
-
-	return (length);
+	return (concat);
 }
