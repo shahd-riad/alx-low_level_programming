@@ -1,6 +1,5 @@
 #ifndef FUNCTION_LIKE_MACRO_H
 #define FUNCTION_LIKE_MACRO_H
-#include <stdlib.h>
 /*
  * File: 3-function_like_macro.h
  *
@@ -8,6 +7,6 @@
  * that computes the absolute value of a number x.
 */
 
-#define ABS(x) abs(x)
+#define ABS(x)  ((x) < 0 ? (-1 * x) : (x))
 
 #endif
