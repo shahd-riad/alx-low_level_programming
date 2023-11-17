@@ -1,19 +1,16 @@
 section .data
-    hello db 'Hello, Holberton\n',0
+    hello db 'Hello, Holberton', 0   ; null-terminated string
 
 section .text
     global main
+    extern printf
 
 main:
-    ; Prepare the arguments for printf
+    ; Call printf with the address of the format string
     mov rdi, hello
     call printf
 
     ; Exit the program
-    mov eax, 60         ; syscall: exit
-    xor edi, edi        ; status: 0
+    mov rax, 60         ; syscall: exit
+    xor rdi, rdi        ; status: 0
     syscall
-
-section .text
-    extern printf
-
