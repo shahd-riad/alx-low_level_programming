@@ -22,9 +22,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	new_node->str = new_str;
 	new_node->len = len;
-	new_node->next = *head;
-	*head = new_node;
-
+	new_node->next = (*head);
+	(*head) = new_node;
+	free(new_str);
 	return (*head);
 }
 
